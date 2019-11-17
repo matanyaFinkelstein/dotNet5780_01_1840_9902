@@ -10,6 +10,7 @@ namespace dotNet5780_01_1840_9902
     {
         static void Main(string[] args)
         {
+            int x;
         }
     }
 }
