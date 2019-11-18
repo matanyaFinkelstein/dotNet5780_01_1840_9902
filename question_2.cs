@@ -43,7 +43,7 @@ namespace dotNet5780_01_1840_9902_2
                         {
                             if (host[month, day + i - 1] == true)
                             {
-
+                                add
                             }
                         }
                     }
