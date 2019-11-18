@@ -64,9 +64,9 @@ namespace dotNet5780_01_1840_9902_2
                         {
                             if (host[i, j])
                             {
-                                if(j ==30)
+                                if(j == 30)
                                 {
-
+                                    flag = true;
                                 }
                                 if (!firstDay)
                                 {
@@ -76,7 +76,7 @@ namespace dotNet5780_01_1840_9902_2
                             }
                             else if (firstDay)
                             {
-                                if (j == 1)
+                                if (flag)
                                 {
 
                                 }
