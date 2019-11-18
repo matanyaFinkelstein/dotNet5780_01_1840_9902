@@ -64,6 +64,10 @@ namespace dotNet5780_01_1840_9902_2
                         {
                             if (host[i, j])
                             {
+                                if(j ==30)
+                                {
+
+                                }
                                 if (!firstDay)
                                 {
                                     firstDay = true;
@@ -72,10 +76,19 @@ namespace dotNet5780_01_1840_9902_2
                             }
                             else if (firstDay)
                             {
-                                if (host[i, j - 1])
+                                if (j == 1)
+                                {
+
+                                }
+                                else
+                                {
+                                    if (host[i, j - 1])
+                                    {
+
+                                    }
+                                }
                             }
-                        }
-                        break;
+                            break;
 
                 case 2:
                     break;
