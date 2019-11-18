@@ -11,7 +11,7 @@ namespace dotNet5780_01_1840_9902_2
         public static int Main(string[] args)
         {
             bool[,] host;
-            host = new bool[12,31];
+            host = new bool[12, 31];
             for (int i = 0; i < 12; i++)
             {
                 for (int j = 0; j < 31; j++)
@@ -34,23 +34,43 @@ namespace dotNet5780_01_1840_9902_2
                     {
                         if (host[month, day + 1] == true)
                             break;
-                            
-                        }
-                            for (int i = 1; i < duration; i++)
-                    {
-                        if (host[month,day+i] == true)
-                        {
-                            if(host[month, day + i-1] == true)
-                                {
 
-                                }
+                    }
+                    for (int i = 1; i < duration; i++)
+                    {
+                        if (host[month, day + i] == true)
+                        {
+                            if (host[month, day + i - 1] == true)
+                            {
+
+                            }
                         }
                     }
-                    
+
 
                     break;
+
                 case 1:
+                    bool flag = false, firstDay = false;
+
+                    for (int i = 0; i < 12; i++)
+                    {
+                        for (int j = 0; j < 31; j++)
+                        {
+                            if (host[i, j])
+                            {
+                                firstDay
+                                if (firstDay)
+                                    Console.WriteLine("{0}.{1}", j, i);
+
+                            }
+                        }
+                    }
+                    break;
+
                 case 2:
+                    break;
+
                 case 3:
                     break;
                 default:
