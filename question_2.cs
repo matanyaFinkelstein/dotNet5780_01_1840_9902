@@ -24,10 +24,11 @@ namespace dotNet5780_01_1840_9902_2
             switch (choice)
             {
                 case 0:
-                    Console.WriteLine("please enter the day in the month of the visit");
-                    int day = StringSplitOptions()
-                    Console.WriteLine("please enter the month of the visit");
-                    int month = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("please enter the date of the visit");
+                    string date = Console.ReadLine();
+                    String[] s = date.Split(new char[] { '.' ,'/' });
+                    int day = Convert.ToInt32(s[0]);
+                    int month = Convert.ToInt32(s[1]);
                     Console.WriteLine("please enter the duration of the visit");
                     int duration = Convert.ToInt32(Console.ReadLine());
                     if (host[month, day] == true)
