@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * 18.11.19
+ * Daniel Posen
+ * Matanya Finkelstein
+ * ex 1.1
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,29 +17,30 @@ namespace dotNet5780_01_1840_9902
         public static int Main(string[] args)
         {
             Random r = new Random();
-            int[] A, B, C;
+
+            int[] A, B, C; // the arrays
             A = new int[20];
             B = new int[20];
             C = new int[20];
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 20; i++)  
             {
-                A[i] = r.Next(18, 122);
+                A[i] = r.Next(18, 122); // fill up the arrays with random numbers
                 B[i] = r.Next(18, 122);
-                C[i] = Math.Abs(A[i]-B[i]);
+                C[i] = Math.Abs(A[i]-B[i]); // calculate the difference between the numbers in every array
             }
             for (int i = 0; i < 20; i++)
             {
-                Console.Write("{0,5}",A[i]);
+                Console.Write("{0,5}",A[i]); // print the first array
             }
-            Console.WriteLine();
+            Console.WriteLine(); // print enter
             for (int i = 0; i < 20; i++)
             {
-                Console.Write("{0,5}", B[i]);
+                Console.Write("{0,5}", B[i]); // print the second array
             }
-            Console.WriteLine();
+            Console.WriteLine(); // print enter
             for (int i = 0; i < 20; i++)
             {
-                Console.Write("{0,5}", C[i]);
+                Console.Write("{0,5}", C[i]); // print the thired array
             }
             Console.ReadKey();
             return 0;
