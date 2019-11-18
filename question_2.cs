@@ -24,10 +24,15 @@ namespace dotNet5780_01_1840_9902_2
             switch (choice)
             {
                 case 0:
-                    Console.WriteLine("please enter the day in the month of the visit");
-                    int day = StringSplitOptions()
-                    Console.WriteLine("please enter the month of the visit");
-                    int month = Convert.ToInt32(Console.ReadLine());
+
+<<<<<<< HEAD
+
+=======
+                    Console.WriteLine("please enter the date of the visit");
+                    string date = Console.ReadLine();
+                    String[] s = date.Split(new char[] { '.' ,'/' });
+                    int day = Convert.ToInt32(s[0]);
+                    int month = Convert.ToInt32(s[1]);
                     Console.WriteLine("please enter the duration of the visit");
                     int duration = Convert.ToInt32(Console.ReadLine());
                     if (host[month, day] == true)
@@ -42,12 +47,12 @@ namespace dotNet5780_01_1840_9902_2
                         {
                             if (host[month, day + i - 1] == true)
                             {
-
+                                add
                             }
                         }
                     }
 
-
+>>>>>>> 8899002002d17eecd4abc47043693ba3c93c0923
                     break;
 
                 case 1:
@@ -64,14 +69,13 @@ namespace dotNet5780_01_1840_9902_2
                                     firstDay = true;
                                     Console.WriteLine("{0}.{1}", j, i);
                                 }
-                                if(firstDay)
-                                {
-                                    if(host[i,j+1])
-                                }
+                            }
+                            else if (firstDay)
+                            {
+                                if (host[i, j - 1])
                             }
                         }
-                    }
-                    break;
+                        break;
 
                 case 2:
                     break;
