@@ -16,17 +16,29 @@ namespace dotNet5780_01_1840_9902_2
             {
                 for (int j = 0; j < 31; j++)
                 {
-                    host[i, j] = false;
+                    host[i, j] = false; // initialization the whole array with false
                 }
             }
-            int choice;
-            choice = Convert.ToInt32(Console.ReadLine());
-            switch (choice)
+
+
+            int choice , counter;
+            bool flag , firstDay , running = true;
+
+            Console.WriteLine("HELLO!");
+
+            while (running)
             {
-                case 0:
+                Console.WriteLine("enter 0 to make aמ order");
+                Console.WriteLine("enter 1 to print list of all of the ordered days");
+                Console.WriteLine("enter 2 to see hwo much days was ordered");
+                Console.WriteLine("enter 3 to exit");
+                choice = Convert.ToInt32(Console.ReadLine()); // get in the choice
+                switch (choice)
+                {
+                    case 0:
+
 
 <<<<<<< HEAD
-
 =======
                     Console.WriteLine("please enter the date of the visit");
                     string date = Console.ReadLine();
@@ -53,52 +65,67 @@ namespace dotNet5780_01_1840_9902_2
                     }
 
 >>>>>>> 8899002002d17eecd4abc47043693ba3c93c0923
-                    break;
+                        break;
 
-                case 1:
-                    bool flag = false, firstDay = false, lastDay = false;
+                    case 1:
+                        firstDay = false;
 
-                    for (int i = 0; i < 12; i++)
-                    {
-                        for (int j = 0; j < 31; j++)
+                        for (int i = 0; i < 12; i++)
                         {
-                            if (host[i, j])
+                            for (int j = 0; j < 31; j++)
                             {
-                                if(j == 30)
+                                if (host[i, j]) // if this day is ordered
                                 {
-                                    flag = true;
+                                    if (!firstDay) // if this is the first day of the order
+                                    {
+                                        firstDay = true; 
+                                        Console.WriteLine("{0}.{1}", j, i);
+                                    }
                                 }
-                                if (!firstDay)
+                                else if (firstDay) // if this is the last day of the order
                                 {
-                                    firstDay = true;
+                                    firstDay = false;
                                     Console.WriteLine("{0}.{1}", j, i);
                                 }
                             }
-                            else if (firstDay)
+                        }
+                        break;
+
+                    case 2:
+                        counter = 0;
+                        flag = false;
+                        for (int i = 0; i < 12; i++)
+                        {
+                            for (int j = 0; j < 31; j++)
                             {
-                                if (flag)
+                                if (host[i, j])
                                 {
-
+                                    counter++;
+                                    if (j == 30)
+                                        flag = true;
                                 }
-                                else
+                                else if (flag)
                                 {
-                                    if (host[i, j - 1])
-                                    {
-
-                                    }
+                                    counter++;
+                                    flag = false;
                                 }
+                                else if (host[i, j - 1])
+                                    counter++;
                             }
-                            break;
+                        }
+                        Console.WriteLine("number of ordered days in this year: {0}", counter);
+                        Console.WriteLine("yearly occupancy: {0}", counter / 372);
+                        break;
 
-                case 2:
-                    break;
+                    case 3:
+                        Console.WriteLine("Goodbye");
+                        running = false;
+                        break;
 
-                case 3:
-                    break;
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
-
 
 
             return 0;
