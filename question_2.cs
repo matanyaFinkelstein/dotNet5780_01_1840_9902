@@ -24,34 +24,12 @@ namespace dotNet5780_01_1840_9902_2
             switch (choice)
             {
                 case 0:
-                    Console.WriteLine("please enter the day in the month of the visit");
-                    int day = StringSplitOptions()
-                    Console.WriteLine("please enter the month of the visit");
-                    int month = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("please enter the duration of the visit");
-                    int duration = Convert.ToInt32(Console.ReadLine());
-                    if (host[month, day] == true)
-                    {
-                        if (host[month, day + 1] == true)
-                            break;
-
-                    }
-                    for (int i = 1; i < duration; i++)
-                    {
-                        if (host[month, day + i] == true)
-                        {
-                            if (host[month, day + i - 1] == true)
-                            {
-
-                            }
-                        }
-                    }
-
+             
 
                     break;
 
                 case 1:
-                    bool flag = false, firstDay = false;
+                    bool flag = false, firstDay = false, lastDay = false;
 
                     for (int i = 0; i < 12; i++)
                     {
@@ -59,10 +37,15 @@ namespace dotNet5780_01_1840_9902_2
                         {
                             if (host[i, j])
                             {
-                                firstDay
-                                if (firstDay)
+                                if (!firstDay)
+                                {
+                                    firstDay = true;
                                     Console.WriteLine("{0}.{1}", j, i);
-
+                                }
+                                if(firstDay)
+                                {
+                                    if(host[i,j+1])
+                                }
                             }
                         }
                     }
