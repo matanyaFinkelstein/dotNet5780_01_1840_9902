@@ -26,9 +26,6 @@ namespace dotNet5780_01_1840_9902_2
             {
                 case 0:
 
-<<<<<<< HEAD
-
-=======
                     Console.WriteLine("please enter the date of the visit");
                     string date = Console.ReadLine();
                     String[] s = date.Split(new char[] { '.', '/' });
@@ -70,52 +67,14 @@ namespace dotNet5780_01_1840_9902_2
                         }
                         Console.WriteLine("The request has been approved");
                     }
+                    else
+                        Console.WriteLine("The request has been rejected");
+                    
 
->>>>>>> 8899002002d17eecd4abc47043693ba3c93c0923
                     break;
 
                 case 1:
-                    bool flag = false, firstDay = false, lastDay = false;
-
-                    for (int i = 0; i < 12; i++)
-                    {
-                        for (int j = 0; j < 31; j++)
-                        {
-                            if (host[i, j])
-                            {
-                                if(j == 30)
-                                {
-                                    flag = true;
-                                }
-                                if (!firstDay)
-                                {
-                                    firstDay = false;
-                                    Console.WriteLine("{0}.{1}", j, i);
-                                }
-                            }
-                        }
-                        break;
-
-                    case 2:
-                        counter = 0;
-                        flag = false;
-                        for (int i = 0; i < 12; i++)
-                        {
-                            for (int j = 0; j < 31; j++)
-                            {
-                                if (flag)
-                                {
-
-                                }
-                                else
-                                {
-                                    if (host[i, j - 1])
-                                    {
-
-                                    }
-                                }
-                            }
-                            break;
+                
 
                 case 2:
                     break;
