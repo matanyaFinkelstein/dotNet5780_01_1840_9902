@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//bla bla bla
-
 namespace dotNet5780_01_1840_9902
 {
     class Program
