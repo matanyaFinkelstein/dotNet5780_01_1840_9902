@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace dotNet5780_01_1840_9902
 {
-
-    //it is so amazing!!
-
     class Program
     {
         public static int Main(string[] args)
