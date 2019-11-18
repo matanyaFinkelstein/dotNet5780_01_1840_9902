@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotNet5780_01_1840_9902
+namespace dotNet5780_01_1840_9902_1
 {
-    class Program
+    class question_1
     {
         public static int Main(string[] args)
         {
